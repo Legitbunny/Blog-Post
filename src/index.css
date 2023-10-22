@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #302ae6;
+    --secondary-color: #536390;
+    --font-color: ##424242;
+    --bg-color : #fff;
+    --headings-color: #292922;
+    --link-color: #0004f8;
+}
+
+[data-theme="dark"]
+{
+    --primary-color: #9a97f3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color : #161625;
+    --headings-color: #818cab;
+    --link-color: #4f49f0;
+}
+
+*{
+    transition: all 0.3s ease-in-out;
+}
