@@ -4,6 +4,7 @@ import Spinner from './Spinner'
 import { useContext } from 'react';
 import "../index.css"
 // import "./Blogs.css"
+import BlogDetails from './BlogDetails';
 
 const Blogs = () => {
     //consume
@@ -19,17 +20,7 @@ const Blogs = () => {
                 <p className='Font'>No Blogs Found</p>
             </div>) : 
             (posts.map((post) => (
-                <div key = {post.id}>
-                    <p className='font-bold text-md text-[--font-color]'>{post.title}</p>
-                    <p className='text-[12px] text-[--font-color]'>By <span className='italic text-[--font-color]'>{post.author}</span> on <span className='underline font-bold text-[--font-color]'>{post.category}</span></p>
-                    <p className='text-[13px] text-[--font-color]'>Posted on {post.date}</p>
-                    <p className='text-[15px] mt-[10px] text-[--font-color]'>{post.content}</p>
-                    <div className='flex gap-x-2'>
-                        {post.tags.map((tag, index) => {
-                            return <span key = {index} className=' underline font-bold text-[11px] text-[--link-color]'>{` #${tag}`}</span>
-                        })}
-                    </div>
-                </div>
+                <BlogDetails key = {post.id} post={post}/>
                 
             )))
         )
